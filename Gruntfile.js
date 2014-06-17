@@ -3,7 +3,13 @@ module.exports = function(grunt) {
         pkg: grunt.file.readJSON('package.json'),
 
         jshint:{
-
+            options: {
+                quotmark:"double",
+                curly:true
+            },
+            dist:{
+                src:["dev/js/*.js", "!dev/js/app.js"]
+            }
         },
 
         concat: {
@@ -33,6 +39,7 @@ module.exports = function(grunt) {
      */
     var taskList = [
         "grunt-contrib-concat",
+        "grunt-contrib-jshint",
         "grunt-contrib-uglify"
     ];
 
@@ -40,5 +47,5 @@ module.exports = function(grunt) {
         grunt.loadNpmTasks(taskList[task]);
     }
 
-    grunt.registerTask("dist", ["concat:dist", "uglify:dist"]);
+    grunt.registerTask("dist", ["jshint:dist", "concat:dist", "uglify:dist"]);
 };

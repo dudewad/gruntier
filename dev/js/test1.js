@@ -5,4 +5,6 @@
 (function(){
     var test1 = 17;
     test1 = 18;
+    var a = "seven";
+    var b = 1 == 1 ? 1 : 0;
 })();
