@@ -17,7 +17,7 @@ module.exports = function(grunt) {
                 separator: ";"
             },
             dist:{
-                src:[ "dev/js/*.js","!dev/js/app.js"],
+                src:["dev/js/*.js","!dev/js/app.js"],
                 dest:"dev/js/app.js"
             }
         },
