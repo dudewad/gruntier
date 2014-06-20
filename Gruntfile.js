@@ -17,9 +17,9 @@ module.exports = function(grunt){
                 options: "<%= pkg.jscsOptions %>",
                 files: {
                     src: [
-                        "<%= pkg.directories.dev_root %>/<%= pkg.directories.js %>/*.js>",
-                        "<%= pkg.directories.root %>Gruntfile.js",
-                        "!<%=pkg.directories.dev_root %><%=pkg.directories.js %>/app.js>"
+                        "<%=pkg.directories.dev_root %><%=pkg.directories.js %>*.js",
+                        "<%=pkg.directories.root %>Gruntfile.js",
+                        "!<%=pkg.directories.dev_root %><%=pkg.directories.js %>app.js"
                     ]
                 }
             }
@@ -45,8 +45,6 @@ module.exports = function(grunt){
         }
     });
 
-    //Trying to output the actual value for the directory...
-    grunt.log.write("<%= pkg.directories.dev_root %>/<%= pkg.directories.js %>/*.js>");
 
 
     /**
