@@ -45,22 +45,9 @@ module.exports = function(grunt){
         }
     });
 
-
-
-    /**
-     * Set up tasks
-     * @type {string[]}
-     */
-    var taskList = [
-        "grunt-contrib-concat",
-        "grunt-contrib-jshint",
-        "grunt-contrib-uglify",
-        "grunt-jscs-checker"
-    ];
-
-    for (var task in taskList){
-        grunt.loadNpmTasks(taskList[task]);
-    }
+    //Loads all tasks from devDependencies.
+    //See load-grunt-tasks for specific customization options.
+    require("load-grunt-tasks")(grunt);
 
     grunt.registerTask("dist", ["jshint:dist", "jscs:dist", "concat:dist", "uglify:dist"]);
 };

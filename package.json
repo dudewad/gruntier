@@ -7,19 +7,20 @@
         "grunt-contrib-concat": "^0.4.0",
         "grunt-contrib-jshint": "^0.10.0",
         "grunt-contrib-uglify": "^0.4.0",
-        "grunt-jscs-checker": "^0.5.1"
+        "grunt-jscs-checker": "^0.5.1",
+        "load-grunt-tasks": "^0.5.0"
     },
     "repository": {
         "type": "git",
         "url": ""
     },
     "directories": {
-        "root":         ".\\",
-        "dev_root":     ".\\dev\\",
-        "prod_root":    ".\\prod\\",
-        "js":           "js\\",
-        "css":          "css\\",
-        "scss":         "scss\\"
+        "root": ".\\",
+        "dev_root": ".\\dev\\",
+        "prod_root": ".\\prod\\",
+        "js": "js\\",
+        "css": "css\\",
+        "scss": "scss\\"
     },
     "jscsOptions": {
         "requireCamelCaseOrUpperCaseIdentifiers": true,
