@@ -3,7 +3,8 @@
  */
 
 var globalVars = [];
-globalVars[0] = 1;;/**
+globalVars[0] = 1;;
+/**
  * Created by pdx-win8user1 on 6/17/2014.
  */
 
@@ -12,7 +13,8 @@ globalVars[0] = 1;;/**
     test1 = 18;
     var a = "seven";
     var b = 1 == 1 ? 1 : 0;
-})();;/**
+})();;
+/**
  * Created by pdx-win8user1 on 6/17/2014.
  */
 

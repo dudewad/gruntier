@@ -1,12 +1,83 @@
 {
-  "name": "test",
-  "version": "0.1.0",
-  "description": "Test Grunt project",
-  "devDependencies": {
-    "grunt": "~0.4.1",
-    "grunt-cli": "^0.1.13",
-    "grunt-contrib-concat": "^0.4.0",
-    "grunt-contrib-jshint": "^0.10.0",
-    "grunt-contrib-uglify": "^0.4.0"
-  }
+    "name": "test",
+    "version": "0.1.0",
+    "description": "Test Grunt project",
+    "devDependencies": {
+        "grunt": "~0.4.2",
+        "grunt-contrib-concat": "^0.4.0",
+        "grunt-contrib-jshint": "^0.10.0",
+        "grunt-contrib-uglify": "^0.4.0",
+        "grunt-jscs-checker": "^0.5.1"
+    },
+    "repository": {
+        "type": "git",
+        "url": ""
+    },
+    "directories": {
+        "root":         ".\\",
+        "dev_root":     ".\\dev\\",
+        "prod_root":    ".\\prod\\",
+        "js":           "js\\",
+        "css":          "css\\",
+        "scss":         "scss\\"
+    },
+    "jscsOptions": {
+        "requireCamelCaseOrUpperCaseIdentifiers": true,
+        "requireCapitalizedConstructors": true,
+        "requireCommaBeforeLineBreak": true,
+        "requireCurlyBraces": [
+            "if",
+            "else",
+            "for",
+            "while",
+            "do",
+            "try",
+            "catch"
+        ],
+        "requireDotNotation": true,
+        "requireParenthesesAroundIIFE": true,
+        "requireSpaceAfterKeywords": [
+            "return"
+        ],
+        "requireSpaceAfterBinaryOperators": true,
+        "requireSpacesInConditionalExpression": true,
+        "disallowDanglingUnderscores": true,
+        "disallowEmptyBlocks": true,
+        "disallowKeywords": [
+            "with"
+        ],
+        "requireKeywordsOnNewLine": [
+            "if",
+            "else",
+            "catch",
+            "case",
+            "default",
+            "switch",
+            "for",
+            "while"
+        ],
+        "disallowMixedSpacesAndTabs": true,
+        "disallowMultipleLineStrings": true,
+        "disallowMultipleVarDecl": true,
+        "disallowPaddingNewlinesInBlocks": true,
+        "disallowSpaceAfterObjectKeys": true,
+        "disallowSpaceBeforePostfixUnaryOperators": true,
+        "disallowSpaceAfterPrefixUnaryOperators": true,
+        "disallowSpacesInsideArrayBrackets": true,
+        "disallowSpaceBeforeBlockStatements": true,
+        "disallowSpacesInsideParentheses": true,
+        "disallowSpacesInsideObjectBrackets": true,
+        "disallowSpacesInFunctionDeclaration": {
+            "beforeOpeningRoundBrace": true,
+            "beforeOpeningCurlyBrace": true
+        },
+        "disallowTrailingComma": true,
+        "disallowTrailingWhitespace": true,
+        "safeContextKeyword": "context",
+        "validateJSDoc": {
+            "checkParamNames": true,
+            "checkRedundantParams": true,
+            "requireParamTypes": true
+        }
+    }
 }
