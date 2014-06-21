@@ -1,6 +1,9 @@
 module.exports = function(grunt){
     grunt.initConfig({
         pkg: grunt.file.readJSON("package.json"),
+
+        directories: "<%=pkg.directories %>",
+
         jshint: {
             dist: {
                 options: {
@@ -25,29 +28,37 @@ module.exports = function(grunt){
             }
         },
 
+        compass: {
+            dist: {
+                options: {
+                }
+            }
+        },
+
         concat: {
             options: {
                 separator: ";\r\n"
             },
             dist: {
-                src: ["dev/js/*.js",
-                     "!dev/js/app.js"],
-                dest: "dev/js/app.js"
+                src: ["<%=pkg.directories.dev_root %><%=pkg.directories.js %>*.js",
+                     "!<%=pkg.directories.dev_root %><%=pkg.directories.js %>app.js"],
+                dest: "<%=pkg.directories.dev_root %><%=pkg.directories.js %>app.js"
             }
         },
 
         uglify: {
             dist: {
                 files: {
-                    "prod/js/app.js": ["dev/js/app.js"]
+                    "<%=pkg.directories.dev_prod %><%=pkg.directories.js %>app.js": ["<%=pkg.directories.dev_root %><%=pkg.directories.js %>app.js"]
                 }
             }
         }
     });
 
+    //Gets all defined tasks from the defined tasks directory
+    grunt.loadTasks(grunt.config.get("pkg.directories.gruntTasks"));
+
     //Loads all tasks from devDependencies.
     //See load-grunt-tasks for specific customization options.
     require("load-grunt-tasks")(grunt);
-
-    grunt.registerTask("dist", ["jshint:dist", "jscs:dist", "concat:dist", "uglify:dist"]);
 };

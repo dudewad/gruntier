@@ -20,7 +20,9 @@
         "prod_root": ".\\prod\\",
         "js": "js\\",
         "css": "css\\",
-        "scss": "scss\\"
+        "scss": "scss\\",
+        "gruntTasks": ".\\grunt\\tasks\\",
+        "gruntOptions": ".\\grunt\\options\\"
     },
     "jscsOptions": {
         "requireCamelCaseOrUpperCaseIdentifiers": true,
