@@ -1,0 +1,24 @@
+body{
+  overflow-x:hidden;
+  overflow-y:hidden;
+  color:#000;
+  font-family:$fontPrimaryRegular;
+  font-size:10px;
+}
+
+ul{
+  padding:0;
+}
+
+li{
+  list-style:none;
+}
+
+sup {
+  vertical-align: top;
+  @include fontSuperscript();
+}
+
+sub{
+  @include fontDisclaimer();
+}

@@ -8,6 +8,8 @@ module.exports = function(grunt){
         "jshint:dist",
         "jscs:dist",
         "concat:dist",
-        "uglify:dist"
+        "uglify:dist",
+        "compass:dev",
+        "compass:dist"
     ]);
 };
