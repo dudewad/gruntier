@@ -17,14 +17,14 @@
     "url": ""
   },
   "directories": {
-    "root": ".\\",
-    "grunt_root": ".\\grunt\\",
-    "dev_root": ".\\dev\\",
-    "prod_root": ".\\prod\\",
-    "js": "js\\",
-    "css": "css\\",
-    "scss": "scss\\",
-    "gruntTasks": ".\\grunt\\tasks\\",
-    "gruntTaskConfig": ".\\grunt\\taskConfig\\"
+    "root": "./",
+    "grunt_root": "./grunt/",
+    "dev_root": "./dev/",
+    "prod_root": "./prod/",
+    "js": "js/",
+    "css": "css/",
+    "scss": "scss/",
+    "gruntTasks": "./grunt/tasks/",
+    "gruntTaskConfig": "./grunt/taskConfig/"
   }
 }

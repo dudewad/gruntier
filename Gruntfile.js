@@ -13,7 +13,7 @@ function loadTaskConfigurations(path){
     //Gets all task config items and imports them to the configs object
     glob.sync('*', {cwd: path}).forEach(function(option){
         key = option.replace(/\.js$/, '');
-        configs[key] = require(process.cwd() + "\\" + path + option);
+        configs[key] = require(process.cwd() + "/" + path + option);
     });
 
     return configs;
@@ -33,7 +33,7 @@ module.exports = function(grunt){
     });
 
     //Load all task configurations
-    var taskConfigurations = loadTaskConfigurations(grunt.config.get("pkg.directories.gruntTaskConfig"), grunt);
+    var taskConfigurations = loadTaskConfigurations(grunt.config.get("pkg.directories.gruntTaskConfig"));
 
     //Add those task configurations to the grunt config
     for(var task in taskConfigurations){

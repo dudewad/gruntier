@@ -25,8 +25,6 @@ module.exports = {
             "with"
         ],
         "requireKeywordsOnNewLine": [
-            "if",
-            "else",
             "catch",
             "case",
             "default",
@@ -42,7 +40,6 @@ module.exports = {
         "disallowSpaceBeforePostfixUnaryOperators": true,
         "disallowSpaceAfterPrefixUnaryOperators": true,
         "disallowSpacesInsideArrayBrackets": true,
-        "disallowSpaceBeforeBlockStatements": true,
         "disallowSpacesInsideParentheses": true,
         "disallowSpacesInsideObjectBrackets": true,
         "disallowSpacesInFunctionDeclaration": {
@@ -59,12 +56,18 @@ module.exports = {
         }
     },
 
+
+
     dist: {
         files: {
             src: [
+                //Update directory path in this directive to go to project dev JS root
                 "<%=pkg.directories.dev_root %><%=pkg.directories.js %>*.js",
+                //Lint the gruntfile (this shouldn't change ever)
                 "<%=pkg.directories.root %>Gruntfile.js",
-                "<%=pkg.directories.grunt_root %>**\\*.js",
+                //Lint the grunt tasks/configs (set grunt_root)
+                "<%=pkg.directories.grunt_root %>**/*.js",
+                //Ignore any concatinated files, etc
                 "!<%=pkg.directories.dev_root %><%=pkg.directories.js %>app.js"
             ]
         }
