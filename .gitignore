@@ -1,0 +1,7 @@
+.idea
+.thumbsdb
+.DS_Store
+*.sass-cache
+*prod
+node_modules
+windows-retail-showcase.iml

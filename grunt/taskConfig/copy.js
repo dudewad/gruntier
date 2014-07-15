@@ -3,16 +3,22 @@
  */
 module.exports = {
     /**
-     *  Buying guides need to copy images and html files
+     * Production
      */
-    exampleTask: {
+    dist: {
         files: [
+            //Copy all HTML
             {
                 expand: "true",
-                cwd: "<%=pkg.directories.your_root_working_directory %>",
-                src: "<%=pkg.settings.directory_with_src_files %>*.html",
-                dest: "<%=pkg.directories.target_directory_for_output %>",
-                rename: function(){/* Some function here will perform file renaming tasks. */}
+                cwd: "<%=pkg.directories.dev_root %>",
+                src: "*.html",
+                dest: "<%=pkg.directories.prod_root %>"
+            },
+            {
+                expand: "true",
+                cwd: "<%=pkg.directories.dev_root %>",
+                src: "<%=pkg.directories.images %>**",
+                dest: "<%=pkg.directories.prod_root %>"
             }
         ]
     }
