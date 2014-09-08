@@ -8,7 +8,7 @@ module.exports = function (grunt) {
         //Run dev every time. When packaging for prod we
         //want both environments to be in sync.
         "dev",
-        "jscs:dist",
+        "jshint:dist",
         "sass:dist",
         "concat:dist",
         "uglify:dist",

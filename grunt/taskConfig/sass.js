@@ -7,8 +7,7 @@ module.exports = {
      */
     dev: {
         options: {
-            style: "expanded",
-            lineNumbers: "true"
+            style: "expanded"
         },
         files: {"<%=pkg.directories.dev_root %><%=pkg.directories.css %>default.css": "<%=pkg.directories.dev_root %><%=pkg.directories.scss %>default.scss"}
     },
