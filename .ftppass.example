@@ -1,0 +1,14 @@
+{
+	"key_ftp_qa": {
+		"username": "someUser",
+		"password": "somePass"
+	},
+	"key_ftp_dev": {
+		"username": "someUser",
+		"password": "somePass"
+	},
+	"key_ftp_review": {
+		"username": "someUser",
+		"password": "somePass"
+	}
+}
