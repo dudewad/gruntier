@@ -18,6 +18,7 @@ Clean by default will empty the dist and temp directories every time. This is go
 # FTP tasks
 
 For the uninitiated, running the ftp deploy task is very handy. There are examples for dev, qa, and review, however they are all the same in theory - this is just a quick way to get a project that has multiple viewing locations for dev, qa and the client respectively. Also, note that there is an .ftppass.example file. To use it, remove the .example extension. **The .ftppass file should _never_ be checked into the project source control**. This file should be explicitly transferred from one developer to another to maintain security.
+The difference between standard ftp tasks and their code-only tasks is that they can be set up to upload only code, whereas the standard task would upload all assets. This is useful for making quick, iterative updates to the server without uploading all the assets, which can be time consuming (particularly with video in a project).
 
 # String-replace
 
