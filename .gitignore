@@ -7,3 +7,4 @@ node_modules
 windows-retail-showcase.iml
 dev/*.html
 *.iml
+dev/js/app.js
