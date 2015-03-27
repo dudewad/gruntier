@@ -11,9 +11,9 @@ function loadTaskConfigurations(path){
     var key;
 
     //Gets all task config items and imports them to the configs object
-    glob.sync('*', {cwd: path}).forEach(function(option){
-        key = option.replace(/\.js$/, '');
-        configs[key] = require(process.cwd() + "/" + path + option);
+    glob.sync('*', {cwd: path}).forEach(function(filename){
+        key = filename.replace(/\.js$/, '');
+        configs[key] = require(process.cwd() + "/" + path + filename);
     });
 
     return configs;
@@ -45,5 +45,10 @@ module.exports = function(grunt){
 
     //Load all tasks from devDependencies.
     //See load-grunt-tasks documentation for specific customization options.
-    require("load-grunt-tasks")(grunt);
+    require("load-grunt-tasks")(grunt, {
+        pattern: [
+            "grunt-*",
+            "assemble"
+        ]
+    });
 };

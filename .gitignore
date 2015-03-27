@@ -5,3 +5,5 @@
 *prod
 node_modules
 windows-retail-showcase.iml
+dev/*.html
+*.iml

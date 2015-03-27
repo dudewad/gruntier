@@ -2,44 +2,56 @@
  * Base stuff
  */
 html, body {
-  -ms-user-select: none; }
+  -ms-user-select: none;
+}
 
 body {
   margin: 0;
-  padding: 0; }
+  padding: 0;
+}
 
 button {
   background: none;
   border: 0;
   padding: 0;
-  min-width: 0; }
+  min-width: 0;
+}
 button:hover, button:active {
-  background: none; }
+  background: none;
+}
 
 body {
   overflow-x: hidden;
   overflow-y: hidden;
   color: #000;
   font-family: "Segoe UI";
-  font-size: 10px; }
+  font-size: 16px;
+  padding: 1em;
+}
 
 ul {
-  padding: 0; }
+  padding: 0;
+}
 
 li {
-  list-style: none; }
+  list-style: none;
+}
 
 sup {
   vertical-align: top;
   font-family: "Segoe UI";
   font-size: .7em;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 sub {
   font-family: "Segoe UI";
   font-size: 1.2em;
-  font-weight: normal; }
+  font-weight: normal;
+}
 
 /**
  * Partials
  */
+
+/*# sourceMappingURL=default.css.map */

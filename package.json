@@ -1,55 +1,61 @@
 {
-    "name": "gruntier",
-        "version": "0.1.0",
-        "description": "Base Grunt Setup",
-        "devDependencies": {
-        "glob": "^4.0.2",
-        "grunt": "~0.4.2",
-        "grunt-contrib-concat": "^0.4.0",
-        "grunt-contrib-copy": "^0.5.0",
-        "grunt-contrib-jshint": "^0.10.0",
-        "grunt-contrib-sass": "^0.8.1",
-        "grunt-contrib-uglify": "^0.4.0",
-        "load-grunt-tasks": "^0.5.0"
+  "name": "gruntier",
+  "version": "0.1.0",
+  "description": "Base Grunt Setup",
+  "devDependencies": {
+    "assemble": "^0.4.42",
+    "glob": "^4.0.2",
+    "grunt": "~0.4.2",
+    "grunt-contrib-clean": "^0.6.0",
+    "grunt-contrib-concat": "^0.4.0",
+    "grunt-contrib-copy": "^0.5.0",
+    "grunt-contrib-jshint": "^0.10.0",
+    "grunt-contrib-less": "^1.0.0",
+    "grunt-contrib-sass": "^0.8.1",
+    "grunt-contrib-uglify": "^0.4.0",
+    "grunt-ftp-deploy": "^0.1.10",
+    "grunt-rsync": "^0.6.2",
+    "grunt-string-replace": "^1.0.0",
+    "load-grunt-tasks": "^0.5.0"
+  },
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "directories": {
+    "root": "./",
+    "grunt_root": "./grunt/",
+    "dev_root": "./dev/",
+    "prod_root": "./prod/",
+    "temp_root": "./.tmp/",
+    "handlebarsTemplate": "template/",
+    "js": "js/",
+    "css": "css/",
+    "scss": "scss/",
+    "gruntTasks": "./grunt/aliasTask/",
+    "gruntTaskConfig": "./grunt/taskConfig/"
+  },
+  "remote": {
+    "ftp_qa": {
+      "auth": {
+        "host": "host.ip.address",
+        "port": "21"
+      },
+      "dest": "/path/to/qa/dest/from/server/login/root/"
     },
-    "repository": {
-        "type": "git",
-        "url": ""
+    "ftp_dev": {
+      "auth": {
+        "host": "host.ip.address",
+        "port": "21"
+      },
+      "dest": "/path/to/dev/dest/from/server/login/root/"
     },
-    "directories": {
-        "root": "./",
-        "grunt_root": "./grunt/",
-        "dev_root": "./dev/",
-        "prod_root": "./prod/",
-        "temp_root": "./.tmp/",
-        "handlebarsTemplates": "templates/",
-        "js": "js/",
-        "css": "css/",
-        "scss": "scss/",
-        "gruntTasks": "./grunt/tasks/",
-        "gruntTaskConfig": "./grunt/taskConfig/"
-    },
-    "remote": {
-        "ftp_qa": {
-            "auth": {
-                "host": "host.ip.address",
-                "port": "21"
-            },
-            "dest": "/path/to/qa/dest/from/server/login/root/"
-        },
-        "ftp_dev": {
-            "auth": {
-                "host": "host.ip.address",
-                "port": "21"
-            },
-            "dest": "/path/to/dev/dest/from/server/login/root/"
-        },
-        "ftp_review": {
-            "auth": {
-                "host": "host.ip.address",
-                "port": "21"
-            },
-            "dest": "/path/to/client-review/dest/from/server/login/root/"
-        }
+    "ftp_review": {
+      "auth": {
+        "host": "host.ip.address",
+        "port": "21"
+      },
+      "dest": "/path/to/client-review/dest/from/server/login/root/"
     }
+  }
 }

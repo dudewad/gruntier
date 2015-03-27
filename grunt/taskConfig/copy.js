@@ -13,12 +13,6 @@ module.exports = {
                 cwd: "<%=pkg.directories.dev_root %>",
                 src: "*.html",
                 dest: "<%=pkg.directories.prod_root %>"
-            },
-            {
-                expand: "true",
-                cwd: "<%=pkg.directories.dev_root %>",
-                src: "<%=pkg.directories.images %>**",
-                dest: "<%=pkg.directories.prod_root %>"
             }
         ]
     }

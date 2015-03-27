@@ -1,24 +1,25 @@
-body{
-  overflow-x:hidden;
-  overflow-y:hidden;
-  color:#000;
-  font-family:$fontPrimaryRegular;
-  font-size:10px;
+body {
+	overflow-x: hidden;
+	overflow-y: hidden;
+	color: #000;
+	font-family: $fontPrimaryRegular;
+	font-size: 16px;
+	padding: 1em;
 }
 
-ul{
-  padding:0;
+ul {
+	padding: 0;
 }
 
-li{
-  list-style:none;
+li {
+	list-style: none;
 }
 
 sup {
-  vertical-align: top;
-  @include fontSuperscript();
+	vertical-align: top;
+	@include fontSuperscript();
 }
 
-sub{
-  @include fontDisclaimer();
+sub {
+	@include fontDisclaimer();
 }
