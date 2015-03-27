@@ -10,7 +10,7 @@ package.json and Gruntfile.js ideally should live in the same directory at the p
 **Note:** _Many of these tasks require configuration. This is not necessarily a working project - it is merely a starting point._
 
 ## Package.json recommendation
-Take note that it is the aim of this project to remove any hard-coded references to directories that might change from any configurations, and abstract them into the Package.json file. Take a look at the pkg.directories object for examples. The thinking is, if it's a directory for a particular type of resource, and that resource could change, then assign it a reference in package.json.
+Take note that it is the aim of this project to remove any hard-coded references to directories that might change from any configurations, and abstract them into the Package.json file. Take a look at the pkg.directories object for examples. The thinking is, if it's a directory for a particular type of resource, the location of that directory could potentially change, then assign it a reference in package.json.
 
 This is particularly important for projects where directories might change. This means that you can update locations in one spot, and your grunt configuration will automatically adjust to support your new directory structure.
 
