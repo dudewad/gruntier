@@ -33,7 +33,7 @@ It is recommended that you use rSync instead. See the rSync section if you are u
 String-replace is currently set up with an example of how to "include" javascript from one file to another; this is not particularly useful. Note that it is merely an example.
 
 ## Rsync Notes
-Rsync is a wonderful file transfer utility, and it is how files are transferred to our various deployment environments for this project. If you do not have experience with rsync, give it a chance; do not try to change this over to an FTP project.
+Rsync is a wonderful file transfer utility, and it is how files are transferred to our various deployment environments for this project. I highly recommend trying Rsync on at least one project if you haven't used it in lieu of FTP. It is much faster.
 
 ### Quick setup
 Rsync runs over ssh, and is natively a linux/mac-based tool. Windows does not have it by default.
